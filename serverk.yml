@@ -1,0 +1,90 @@
+# yaml-language-server: $schema=./serverk.schema.json
+schemaVersion: serverk.gg/v1
+kind: GuidePackage
+
+metadata:
+  id: platform
+
+guideTags:
+  - id: start
+    name:
+      ar: ابدأ من هنا
+      en: Start here
+  - id: billing
+    name:
+      ar: الفوترة
+      en: Billing
+  - id: account
+    name:
+      ar: الحساب
+      en: Account
+
+guides:
+  - id: getting-started
+    title:
+      ar: أول سيرفر لك على سيرفرك
+      en: Your first server on Serverk
+    summary:
+      ar: من إنشاء الحساب حتى سيرفر شغال — الرحلة كاملة خطوة بخطوة.
+      en: From creating an account to a running server — the whole journey, step by step.
+    tags:
+      - start
+    surfaces:
+      - overview
+    bodyPath:
+      ar: guides/getting-started/ar.md
+      en: guides/getting-started/en.md
+
+  - id: panel-basics
+    title:
+      ar: جولة في لوحة التحكم
+      en: A tour of the panel
+    summary:
+      ar: نظرة عامة، الكونسول، الملفات، والإعدادات — وش تسوي في كل تبويب.
+      en: Overview, console, files and settings — what each tab is for.
+    tags:
+      - start
+    surfaces:
+      - overview
+    bodyPath:
+      ar: guides/panel-basics/ar.md
+      en: guides/panel-basics/en.md
+
+  - id: billing
+    title:
+      ar: الفوترة وتمديد سيرفرك
+      en: Billing and extending your server
+    summary:
+      ar: كيف تشتغل الأسعار بالريال، متى ينتهي سيرفرك، وكيف تمدده قبل ما يتوقف.
+      en: How SAR pricing works, when your server expires, and how to extend it in time.
+    tags:
+      - billing
+    bodyPath:
+      ar: guides/billing/ar.md
+      en: guides/billing/en.md
+
+  - id: payments
+    title:
+      ar: طرق الدفع
+      en: Payment methods
+    summary:
+      ar: مدى، Apple Pay، والبطاقات الائتمانية — وكيف تعيد محاولة دفعة فشلت.
+      en: mada, Apple Pay and credit cards — and how to retry a failed payment.
+    tags:
+      - billing
+    bodyPath:
+      ar: guides/payments/ar.md
+      en: guides/payments/en.md
+
+  - id: discord
+    title:
+      ar: اربط حسابك بديسكورد
+      en: Connect your Discord
+    summary:
+      ar: انضم لمجتمع سيرفرك واربط حسابك عشان تتابع سيرفراتك من ديسكورد.
+      en: Join the Serverk community and link your account to follow your servers from Discord.
+    tags:
+      - account
+    bodyPath:
+      ar: guides/discord/ar.md
+      en: guides/discord/en.md
