@@ -1,0 +1,19 @@
+name: تصحيح أو شرح جديد / Guide fix or new guide
+description: خطأ في شرح موجود، أو شرح ناقص تبي نضيفه / A mistake in an existing guide, or a missing guide to add
+labels:
+  - guides
+body:
+  - type: input
+    id: guide
+    attributes:
+      label: أي شرح؟ / Which guide?
+      placeholder: getting-started, billing, شرح جديد...
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: التفاصيل / Details
+      description: وش الغلط أو وش الناقص؟ / What is wrong or missing?
+    validations:
+      required: true
