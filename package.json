@@ -4,13 +4,14 @@
 	"type": "module",
 	"scripts": {
 		"prepare": "git config core.hooksPath .githooks",
+		"postinstall": "serverk-bridge link",
 		"validate": "serverk-bridge validate",
 		"schema": "serverk-bridge schema",
 		"check": "bunx biome check",
 		"fix": "bunx biome check --write --unsafe"
 	},
 	"dependencies": {
-		"@serverkgg/bridge": "0.0.2"
+		"@serverkgg/bridge": "0.0.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.7"
