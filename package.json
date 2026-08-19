@@ -11,7 +11,7 @@
 		"fix": "bunx biome check --write --unsafe"
 	},
 	"dependencies": {
-		"@serverkgg/bridge": "0.0.5"
+		"@serverkgg/bridge": "0.0.6"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.7"
