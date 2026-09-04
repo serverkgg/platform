@@ -1,6 +1,6 @@
 ## Join the community
 
-The Serverk Discord is where you find players like you, ask questions, and help others — the [invite link](https://discord.gg/gwGT2Mqd6A) is always in the footer of any page.
+The Serverk Discord is where you find players like you, ask questions, and help others — the [invite link](https://serverk.gg/join/discord) is always in the footer of any page.
 
 ## Link your account
 
