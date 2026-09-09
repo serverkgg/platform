@@ -66,6 +66,38 @@ guides:
       ar: guides/backups/ar.md
       en: guides/backups/en.md
 
+  - id: rcon
+    title:
+      ar: الوصول عن بُعد (RCON)
+      en: Remote access (RCON)
+    summary:
+      ar: افتح RCON لسيرفرك عشان تديره بأدوات خارجية — التشغيل، كلمة المرور، الأمان، وكل لعبة ووضعها.
+      en: Open RCON so external tools can manage your server — turning it on, the password, security, and where each game stands.
+    tags:
+      - start
+    surfaces:
+      - panel
+      - overview
+    bodyPath:
+      ar: guides/rcon/ar.md
+      en: guides/rcon/en.md
+
+  - id: sftp
+    title:
+      ar: نقل الملفات (SFTP)
+      en: File transfer (SFTP)
+    summary:
+      ar: انقل مجلداتك ومودّاتك وعوالمك ببرنامج على جهازك — بيانات الاتصال، FileZilla و WinSCP.
+      en: Move folders, mods and worlds with a desktop program — your connection details, FileZilla and WinSCP.
+    tags:
+      - start
+    surfaces:
+      - files
+      - overview
+    bodyPath:
+      ar: guides/sftp/ar.md
+      en: guides/sftp/en.md
+
   - id: billing
     title:
       ar: الفوترة وتمديد سيرفرك
