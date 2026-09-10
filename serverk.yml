@@ -98,6 +98,38 @@ guides:
       ar: guides/sftp/ar.md
       en: guides/sftp/en.md
 
+  - id: moving-in
+    title:
+      ar: انقل سيرفرك من استضافة ثانية
+      en: Move your server in from another host
+    summary:
+      ar: عالمك ومودّاتك وإعداداتك تجي معك — ملف مضغوط من اللوحة، أو SFTP، أو تذكرة نقل ننقلها لك مجاناً.
+      en: Bring your world, mods and settings across — an archive from the panel, SFTP, or a migration ticket we handle for free.
+    tags:
+      - start
+    surfaces:
+      - files
+      - overview
+    bodyPath:
+      ar: guides/moving-in/ar.md
+      en: guides/moving-in/en.md
+
+  - id: own-domain
+    title:
+      ar: استخدم دومينك الخاص
+      en: Use your own domain
+    summary:
+      ar: خلّ لاعبينك يدخلون من دومينك — سجل SRV لماينكرافت جافا، وسجل CNAME لباقي الألعاب.
+      en: Let your players join through your own domain — an SRV record for Minecraft Java, a CNAME for every other game.
+    tags:
+      - start
+    surfaces:
+      - panel
+      - overview
+    bodyPath:
+      ar: guides/own-domain/ar.md
+      en: guides/own-domain/en.md
+
   - id: billing
     title:
       ar: الفوترة وتمديد سيرفرك
