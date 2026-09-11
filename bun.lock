@@ -5,7 +5,7 @@
     "": {
       "name": "@serverkgg/platform",
       "dependencies": {
-        "@serverkgg/bridge": "0.0.12",
+        "@serverkgg/bridge": "0.0.16",
       },
       "devDependencies": {
         "@biomejs/biome": "2.5.7",
@@ -31,7 +31,7 @@
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.5.7", "", { "os": "win32", "cpu": "x64" }, "sha512-V+0wu/nrj2S+MhP4EQ0uHNolP0IALEsz45pg0WoKkHfDeh0+ItHwP/p7bX5RPoMOl9NkpHYWdYPhIcy2mACHvQ=="],
 
-    "@serverkgg/bridge": ["@serverkgg/bridge@0.0.12", "", { "dependencies": { "zod": "4.5.4" }, "bin": { "serverk-bridge": "src/cli/main.ts" } }, "sha512-R1syXWr/OQR0QS8J863IGksEcOr1ef9AoCANbTvAmZ+DXdG74XjUXAUUcGjBBvITQ0gSXFdAkcnHO5VCm6aZCQ=="],
+    "@serverkgg/bridge": ["@serverkgg/bridge@0.0.16", "", { "dependencies": { "zod": "4.5.4" }, "bin": { "serverk-bridge": "src/cli/main.ts" } }, "sha512-kizowYK0hx7lJi9ivdNjwF72s5/g9vWKrN23CC/pUhX8MKs6RiY7EONZz/AA92HfE6q4AOa1DJKrHIZc76vccA=="],
 
     "zod": ["zod@4.5.4", "", {}, "sha512-sC95tT5iHHH9gtpj6A81kh+NEaRAUFN+qlUPDUbRfOMvNf5QCBqsb3WgvnpVtK5Y+4UfA6KqufotuTvMGiTlsA=="],
   }
