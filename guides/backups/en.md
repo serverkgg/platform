@@ -2,7 +2,7 @@
 
 A compressed copy of every file on your server at the moment it was taken: your world, your plugins, your mods and your config files. You will find them in the **Backups** tab of your server panel, and you can roll back to any of them with one click.
 
-> [!note] A backup captures what reached the disk, not what is still in memory. That is why we ask the game to save first — and tell you when it could not.
+> [!note] A backup captures what reached the disk, not what is still in memory. That is why we ask the game to save first — and never call a backup clean when the save did not confirm.
 
 ## Daily, and before every change
 
@@ -16,11 +16,29 @@ You can **keep** a backup so it is never deleted automatically — but a kept ba
 
 ## Clean or mid-play
 
-Before taking a backup we ask the game to save and pause its writes for a moment. If that works the backup is badged **Clean**; if it does not, it is badged **Mid-play** — the last few seconds of play may be missing.
+When the server is running, we ask the game to save its world before the backup and wait for it to confirm the save finished. When it confirms, the backup is badged **Clean**. If we asked for a save and it never confirmed, we do not take a partial copy and call it clean — the backup fails and you get the reason. A backup taken while the server is stopped is always **Clean**.
 
-Minecraft, Palworld, Rust and FiveM all support the save-before-copy step. Hytale has no documented flush command, so its backups are always **Mid-play** — we say so rather than pretend otherwise.
+How each game saves before a backup:
+
+- **Minecraft** — we turn autosave off, flush the whole world to disk, and turn autosave back on once the backup is done.
+- **Minecraft Bedrock** — we hold the world's writes, ask the server for the list of world files and their sizes at the moment of the save, copy exactly those bytes, and then let the server save normally again.
+- **Palworld** — we ask the server to save the world before the backup.
+- **Rust** — we ask the server to save the map before the backup.
+- **ARK: Survival Ascended** — we send `SaveWorld` and wait for the server to report the save complete.
+- **Hytale** — we send `/world save --all --confirm` and wait for the server to confirm every world is saved.
+- **Valheim** — there is no manual save command. Valheim saves on its interval (set in the settings) and when it shuts down, so a backup taken while it runs holds the last autosave and is badged **Mid-play** — the most recent stretch of play may be missing.
 
 > [!note] The safest backup is one taken with the server stopped. Stop it for a minute, take the backup, start it again.
+
+## Changes that touch your world
+
+Some buttons in your game panel change your world or your mods directly: adding, deleting or activating a world, installing or removing a mod or pack, and wipes. These never run on a live server — they start a **Saving before your change** operation:
+
+1. **Saving a recovery copy** — we stop the game and wait until its recovery copy is stored before changing anything.
+2. **Applying the change** — while the game is stopped.
+3. **Restoring the power state** — a running server starts again; a stopped server stays stopped.
+
+Because the server is stopped at that moment, the recovery copy is **Clean**. If the change does not complete we show you the reason, and you can press **Restore recovery copy**: we save your current files first, then restore the files and settings from before the change.
 
 ## The off-site copy and downloads
 
@@ -45,7 +63,7 @@ When your subscription expires your files and backups stay downloadable from the
 A failed backup sends you a message, and the reason sits on the backup card itself:
 
 - **Out of disk space** — delete an old backup, or files you no longer need, from the Files tab
-- **The server did not answer** — try stopping it and taking the backup while it is off
+- **The server did not answer, or did not confirm its save** — try stopping it and taking the backup while it is off
 - **It keeps failing** — open a [support ticket](/dashboard/support) with your server code
 
 Your last good backup stays exactly where it is however many new ones fail, and the automatic schedule carries on by itself.
