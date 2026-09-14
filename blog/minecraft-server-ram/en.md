@@ -33,7 +33,7 @@ This is the case that breaks the rule. A heavy modpack needs a lot of memory eve
 
 The reason is that mods load themselves fully into memory the moment the server starts — before a single player joins. Player count is a secondary factor here; the modpack itself is the primary one.
 
-> [!note] If you want to try a modpack, see the [modpacks guide](/games/minecraft/guides/modpacks) — we have a ready catalog and install it for you in one click.
+> [!note] If you want to try a modpack, see the [modpacks guide](/games/minecraft-java/guides/modpacks) — we have a ready catalog and install it for you in one click.
 
 ## Things that raise RAM and people forget
 

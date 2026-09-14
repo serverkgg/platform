@@ -26,7 +26,7 @@ On Serverk, crossplay is a single switch in your Minecraft server settings. Turn
 
 Under the hood this runs on Geyser and Floodgate, which translate the Bedrock protocol into Java. You install nothing and configure nothing — we set it up.
 
-The full steps are in the [crossplay guide](/games/minecraft/guides/crossplay).
+The full steps are in the [crossplay guide](/games/minecraft-java/guides/crossplay).
 
 ## Watch one thing: RAM
 
@@ -38,10 +38,10 @@ So if you sized the plan exactly to your player count, leave some headroom befor
 
 A close cousin of the same problem, and a common one: one friend updated to the newest version, another stayed on an older one for mods, and now they cannot share a server.
 
-That is one switch here too — see the [version compatibility guide](/games/minecraft/guides/version-compat).
+That is one switch here too — see the [version compatibility guide](/games/minecraft-java/guides/version-compat).
 
 ## Start here
 
 - [The server planner with crossplay](/tools/planner?game=minecraft&crossplay=1) — sizes your plan with the phone players counted in.
-- [The crossplay guide](/games/minecraft/guides/crossplay) — the full steps inside the panel.
+- [The crossplay guide](/games/minecraft-java/guides/crossplay) — the full steps inside the panel.
 - [Create your server](/create) — ready in about a minute, and crossplay is one click after that.
