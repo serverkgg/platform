@@ -4,15 +4,26 @@ A compressed copy of every file on your server at the moment it was taken: your 
 
 > [!note] A backup captures what reached the disk, not what is still in memory. That is why we ask the game to save first — and never call a backup clean when the save did not confirm.
 
-## Daily, and before every change
+## Daily, and before every big change
 
-We take one automatically every day, plus an extra one before anything that touches your files: an upgrade, a version change, a game change, a reset, or a move to another machine. Automatic backups do not use your slots and follow their own rotation: the last 7 daily and the last 4 weekly are kept, and each operation keeps the newest backup taken before it.
+We take one automatically every day, plus an extra one before anything that touches your files: an upgrade, a version change, a game change, a reset, and a content change from your game panel. These are all on us: free, they take nothing from your own space, and we rotate them for you — we keep a history of 7 days on which your server actually changed, and a recovery copy taken before a change lives for 3 days, the window in which you can go back to how things were.
 
-## Slots and space
+Before an automatic backup, and before a recovery copy, we compare your server's files with your newest backup: when nothing changed we take no new copy — we mark that older backup on its card as still matching your files as of that moment. Backups you take yourself are always taken, changed or not.
 
-Every server has 5 slots for manual backups, 20 GB of backup space in total, and each backup is kept for 30 days. When slots or space run out we tell you exactly which one stopped you.
+This safety net never stops you. If a recovery copy cannot be taken for any reason, we say so in your server's activity and carry on with the change you asked for.
 
-You can **keep** a backup so it is never deleted automatically — but a kept backup still holds its slot, so do not keep everything.
+## Your own space
+
+You get backup space of your own the size of your server's disk — a 20 GB disk gives you 20 GB of backups. It holds:
+
+- The backups you take yourself with **Back up now**.
+- The backups you import from another host.
+- The backups your own scheduled tasks take.
+- Any automatic backup you **keep**.
+
+Your backups never expire and we never delete them for you; they stay until you delete them. When the space runs out we say so straight away: delete a backup, or stop keeping one, to take a new one.
+
+> [!note] Keeping an automatic backup moves it out of the safety net and into your space — it stops rotating, and it counts against your space. Stop keeping it and it goes back into rotation.
 
 ## Clean or mid-play
 
