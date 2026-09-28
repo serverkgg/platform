@@ -18,6 +18,10 @@ guideTags:
     name:
       ar: الحساب
       en: Account
+  - id: games
+    name:
+      ar: سيرفرات الألعاب
+      en: Game servers
 
 guides:
   - id: getting-started
@@ -29,6 +33,7 @@ guides:
       en: From creating an account to a running server — the whole journey, step by step.
     tags:
       - start
+      - games
     surfaces:
       - overview
     bodyPath:
@@ -44,6 +49,7 @@ guides:
       en: Overview, console, files and settings — what each tab is for.
     tags:
       - start
+      - games
     surfaces:
       - overview
     bodyPath:
@@ -75,6 +81,7 @@ guides:
       en: Open RCON so external tools can manage your server — turning it on, the password, security, and where each game stands.
     tags:
       - start
+      - games
     surfaces:
       - panel
       - overview
@@ -91,6 +98,7 @@ guides:
       en: Move folders, mods and worlds with a desktop program — your connection details, FileZilla and WinSCP.
     tags:
       - start
+      - games
     surfaces:
       - files
       - overview
@@ -107,6 +115,7 @@ guides:
       en: Bring your world, mods and settings across — an archive from the panel, SFTP, or a migration ticket we handle for free.
     tags:
       - start
+      - games
     surfaces:
       - files
       - overview
@@ -123,6 +132,7 @@ guides:
       en: Let your players join through your own domain — an SRV record for Minecraft Java, a CNAME for every other game.
     tags:
       - start
+      - games
     surfaces:
       - panel
       - overview
