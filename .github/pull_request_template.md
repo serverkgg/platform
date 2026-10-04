@@ -1,8 +1,8 @@
-## وش يغيّر هذا الـ PR؟ / What does this PR change?
+## ما الذي يغيّره هذا الـ PR؟ / What does this PR change?
 
 <!-- اشرح التغيير باختصار / Briefly explain the change -->
 
 ## التحقق / Verification
 
-- [ ] كل شرح معدّل له نسختين `ar.md` و`en.md` متطابقتين بالمحتوى / Every touched guide has matching `ar.md` and `en.md`
-- [ ] العربي بلهجة خليجية مو فصحى رسمية / Arabic reads as Gulf dialect, not formal MSA
+- [ ] لكل شرح معدّل ملفان `ar.md` و `en.md` متطابقان في المحتوى / Every touched guide has matching `ar.md` and `en.md`
+- [ ] العربية مكتوبة وفق معيار سيرفرك: فصحى مع لمسة خليجية خفيفة / Arabic follows the Serverk copy standard: formal, with a light Gulf touch

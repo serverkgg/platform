@@ -2,24 +2,24 @@
 
 Payments go through the Saudi **Moyasar** gateway, which supports:
 
-- **mada** — Saudi bank cards
-- **Apple Pay** — the fastest way from your phone
-- **Credit cards** — Visa and Mastercard
+- **mada**: Saudi bank cards
+- **Apple Pay**: the fastest way to pay from your phone
+- **Credit cards**: Visa and Mastercard
 
-All prices are in Saudi Riyal — what you see is what you pay, with no currency conversion and no hidden fees.
+All prices are in Saudi riyals: what you see is what you pay, with no currency conversion and no hidden fees.
 
 ## Payment failed?
 
-It happens — insufficient balance, a purchase limit, or a bank decline:
+It can happen because of insufficient balance, a purchase limit, or a decline from your bank:
 
-1. Open the [orders page](/dashboard/orders) and enter the order
-2. Hit **Retry** and try the same card or another one
-3. If mada keeps declining, make sure online purchases are enabled in your bank's app
+1. Open the [orders page](/dashboard/orders) and open the order
+2. Press **Try again** and use the same card or another one
+3. If mada keeps declining, make sure online purchases are turned on in your bank's app
 
 > [!note] An amount that shows as held after a failed attempt is released automatically within your bank's usual timeframe.
 
 ## Security
 
-Your card details go straight to the payment gateway and never pass through our servers — we neither see nor store card numbers.
+Your card details go straight to the payment gateway and never pass through our servers. We don't see or store card numbers.
 
-A payment issue that will not go away? Email support@serverk.gg with your order number.
+A payment problem that won't go away? Email help@serverk.gg with your order number.

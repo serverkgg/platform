@@ -1,61 +1,61 @@
 ## What a backup holds
 
-A compressed copy of every file on your server at the moment it was taken: your world, your plugins, your mods and your config files. You will find them in the **Backups** tab of your server panel, and you can roll back to any of them with one click.
+A compressed copy of every file on your server at the moment it was taken: your world, your plugins, your mods and your config files. You'll find them in the **Backups** tab of your server panel, and you can roll back to any of them with one click.
 
-> [!note] A backup captures what reached the disk, not what is still in memory. That is why we ask the game to save first — and never call a backup clean when the save did not confirm.
+> [!note] A backup captures what reached the disk, not what is still in memory. That's why we ask the game to save first, and we never call a backup clean when the save didn't confirm.
 
 ## Daily, and before every big change
 
-We take one automatically every day, plus an extra one before anything that touches your files: an upgrade, a version change, a game change, a reset, and a content change from your game panel. These are all on us: free, they take nothing from your own space, and we rotate them for you — we keep a history of 7 days on which your server actually changed, and a recovery copy taken before a change lives for 3 days, the window in which you can go back to how things were.
+We take one automatically every day, plus an extra one before anything that touches your files: an upgrade, a version change, a game change, a reset, and a content change from your game panel. These are all on us: they're free, they take nothing from your own space, and we rotate them for you. We keep a history of 7 days on which your server actually changed, and a recovery copy taken before a change lives for 3 days, the window in which you can go back to how things were.
 
-Before an automatic backup, and before a recovery copy, we compare your server's files with your newest backup: when nothing changed we take no new copy — we mark that older backup on its card as still matching your files as of that moment. Backups you take yourself are always taken, changed or not.
+Before an automatic backup, and before a recovery copy, we compare your server's files with your newest backup. When nothing changed, we take no new copy and instead mark that older backup on its card as still matching your files as of that moment. Backups you take yourself are always taken, changed or not.
 
-This safety net never stops you. If a recovery copy cannot be taken for any reason, we say so in your server's activity and carry on with the change you asked for.
+This safety net never stops you. If a recovery copy can't be taken for any reason, we say so in your server's activity and carry on with the change you asked for.
 
 ## Your own space
 
-You get backup space of your own the size of your server's disk — a 20 GB disk gives you 20 GB of backups. It holds:
+You get backup space of your own the size of your server's disk: a 20 GB disk gives you 20 GB of backups. It holds:
 
 - The backups you take yourself with **Back up now**.
 - The backups you import from another host.
 - The backups your own scheduled tasks take.
-- Any automatic backup you **keep**.
+- Any automatic backup you keep with **Keep it in your storage**.
 
-Your backups never expire and we never delete them for you; they stay until you delete them. When the space runs out we say so straight away: delete a backup, or stop keeping one, to take a new one.
+Your backups never expire and we never delete them for you; they stay until you delete them. When the space runs out we tell you right away: delete a backup, or stop keeping one, to take a new one.
 
-> [!note] Keeping an automatic backup moves it out of the safety net and into your space — it stops rotating, and it counts against your space. Stop keeping it and it goes back into rotation.
+> [!note] Keeping an automatic backup moves it out of the safety net and into your space: it stops rotating, and it counts against your space. Stop keeping it and it goes back into rotation.
 
 ## Clean or mid-play
 
-When the server is running, we ask the game to save its world before the backup and wait for it to confirm the save finished. When it confirms, the backup is badged **Clean**. If we asked for a save and it never confirmed, we do not take a partial copy and call it clean — the backup fails and you get the reason. A backup taken while the server is stopped is always **Clean**.
+When the server is running, we ask the game to save its world before the backup and wait for it to confirm the save finished. When it confirms, the backup is badged **Clean**. If we asked for a save and it never confirmed, we don't take a partial copy and call it clean: the backup fails and you get the reason. A backup taken while the server is stopped is always **Clean**.
 
 How each game saves before a backup:
 
-- **Minecraft** — we turn autosave off, flush the whole world to disk, and turn autosave back on once the backup is done.
-- **Minecraft Bedrock** — we hold the world's writes, ask the server for the list of world files and their sizes at the moment of the save, copy exactly those bytes, and then let the server save normally again.
-- **Palworld** — we ask the server to save the world before the backup.
-- **Rust** — we ask the server to save the map before the backup.
-- **ARK: Survival Ascended** — we send `SaveWorld` and wait for the server to report the save complete.
-- **Hytale** — we send `/world save --all --confirm` and wait for the server to confirm every world is saved.
-- **Valheim** — there is no manual save command. Valheim saves on its interval (set in the settings) and when it shuts down, so a backup taken while it runs holds the last autosave and is badged **Mid-play** — the most recent stretch of play may be missing.
+- **Minecraft**: we turn autosave off, flush the whole world to disk, and turn autosave back on once the backup is done.
+- **Minecraft Bedrock**: we hold the world's writes, ask the server for the list of world files and their sizes at the moment of the save, copy exactly those bytes, and then let the server save normally again.
+- **Palworld**: we ask the server to save the world before the backup.
+- **Rust**: we ask the server to save the map before the backup.
+- **ARK: Survival Ascended**: we send `SaveWorld` and wait for the server to report the save complete.
+- **Hytale**: we send `/world save --all --confirm` and wait for the server to confirm every world is saved.
+- **Valheim**: there is no manual save command. Valheim saves on its interval (set in the settings) and when it shuts down, so a backup taken while it runs holds the last autosave and is badged **Mid-play**, which means the most recent stretch of play may be missing.
 
 > [!note] The safest backup is one taken with the server stopped. Stop it for a minute, take the backup, start it again.
 
 ## Changes that touch your world
 
-Some buttons in your game panel change your world or your mods directly: adding, deleting or activating a world, installing or removing a mod or pack, and wipes. These never run on a live server — they start a **Saving before your change** operation:
+Some buttons in your game panel change your world or your mods directly: adding, deleting or activating a world, installing or removing a mod or pack, and wipes. These never run on a live server. Instead, they start an **Applying your change** operation:
 
-1. **Saving a recovery copy** — we stop the game and wait until its recovery copy is stored before changing anything.
-2. **Applying the change** — while the game is stopped.
-3. **Restoring the power state** — a running server starts again; a stopped server stays stopped.
+1. **Saving a recovery copy**: we stop the game and wait until its recovery copy is stored before changing anything.
+2. **Applying the change**: while the game is stopped.
+3. **Restoring the power state**: a running server starts again; a stopped server stays stopped.
 
-Because the server is stopped at that moment, the recovery copy is **Clean**. If the change does not complete we show you the reason, and you can press **Restore recovery copy**: we save your current files first, then restore the files and settings from before the change.
+Because the server is stopped at that moment, the recovery copy is **Clean**. If the change doesn't complete, we show you the reason, and you can press **Restore recovery copy**: we save your current files first, then restore the files and settings from before the change.
 
 ## The off-site copy and downloads
 
-Every stored backup gets a second copy in off-site storage on a different provider from your server's machine, so your backup survives even if the whole machine is lost. Each backup shows where it is: **Copying off-site** while it travels, **Off-site copy** once it lands.
+Every stored backup gets a second copy in off-site storage on a different provider from your server's machine, so your backup survives even if the whole machine is lost. Each backup shows where it is: **Copying off-site…** while it's on its way, **Off-site copy** once it's there.
 
-As soon as the off-site copy is done the **Download** button opens — it hands you a direct link to a `tar.zst` file. The link lives for a few minutes, and you get 10 downloads an hour.
+As soon as the off-site copy is done, the **Download** button becomes available. It gives you a direct link to a `tar.zst` file. The link works for a few minutes, and you get 10 downloads an hour.
 
 ## Restoring
 
@@ -63,18 +63,18 @@ Press **Restore** on the backup you want. We take a copy of the current state fi
 
 > [!warning] A restore erases everything that happened after the backup was taken. If you want to keep a file from the current state, download it from the Files tab before you start.
 
-If the local archive is corrupt or missing we pull the backup from off-site storage automatically. We also re-check backups byte for byte on a schedule, so a corrupt one is flagged and healed from the off-site copy.
+If the local archive is corrupt or missing, we pull the backup from off-site storage automatically. We also re-check backups byte for byte on a schedule, so a corrupt one is flagged and repaired from the off-site copy.
 
 ## After your subscription ends
 
-When your subscription expires your files and backups stay downloadable from the panel for the whole grace period. Once the server is deleted, backups that have an off-site copy move into the **vault** on your account — at [/dashboard/backups](/dashboard/backups) — where you can download them for another 30 days.
+When your subscription expires, your files and backups stay downloadable from the panel for the whole grace period. Once the server is deleted, backups that have an off-site copy move into the **Backup vault** on your account, at [/dashboard/backups](/dashboard/backups), where you can download them for another 30 days.
 
 ## When a backup fails
 
-A failed backup sends you a message, and the reason sits on the backup card itself:
+A failed backup sends you a message, and the reason is on the backup card itself:
 
-- **Out of disk space** — delete an old backup, or files you no longer need, from the Files tab
-- **The server did not answer, or did not confirm its save** — try stopping it and taking the backup while it is off
-- **It keeps failing** — open a [support ticket](/dashboard/support) with your server code
+- **Out of disk space**: delete an old backup, or files you no longer need, from the Files tab
+- **The server didn't answer, or didn't confirm its save**: stop it and take the backup while it's stopped
+- **It keeps failing**: open a [support ticket](/dashboard/support) with your server code
 
 Your last good backup stays exactly where it is however many new ones fail, and the automatic schedule carries on by itself.

@@ -1,5 +1,5 @@
 name: تصحيح أو شرح جديد / Guide fix or new guide
-description: خطأ في شرح موجود، أو شرح ناقص تبي نضيفه / A mistake in an existing guide, or a missing guide to add
+description: خطأ في شرح موجود، أو شرح ناقص تريد إضافته / A mistake in an existing guide, or a missing guide to add
 labels:
   - guides
 body:
@@ -14,6 +14,6 @@ body:
     id: details
     attributes:
       label: التفاصيل / Details
-      description: وش الغلط أو وش الناقص؟ / What is wrong or missing?
+      description: ما الذي يحتاج إلى تصحيح أو إضافة؟ / What is wrong or missing?
     validations:
       required: true
