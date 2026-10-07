@@ -53,4 +53,4 @@ Instead of guessing, use the [server planner](/tools/planner?game=minecraft). It
 
 - [Size your plan now](/tools/planner?game=minecraft)
 - [Compare our prices with the rest](/compare)
-- [Create your server](/create)
+- [Create your server](/games/create?game=minecraft-java)

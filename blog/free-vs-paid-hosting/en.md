@@ -57,4 +57,4 @@ On Serverk the server is ready in about a minute, prices are final with no VAT o
 
 - Check how much RAM you actually need with the [server planner](/tools/planner). Most people are surprised the number, and the price, are lower than they expected.
 - Compare prices and specs on the [comparison page](/compare).
-- Convinced? [Create your server](/create).
+- Convinced? [Create your server](/games/create).

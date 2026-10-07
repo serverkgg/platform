@@ -49,4 +49,4 @@ Most importantly, the server doesn't depend on your PC or your home line, so the
 - Not sure how much RAM you need? The [server planner](/tools/planner) sizes the plan from your player count and how you play.
 - Running a server at home and want to know whether friends can reach it? The [port checker](/tools/port-check).
 - Want to know whether a given server is up? The [server status checker](/tools/status).
-- Ready? [Create your server](/create) and we'll handle the rest.
+- Ready? [Create your server](/games/create?game=minecraft-java) and we'll handle the rest.

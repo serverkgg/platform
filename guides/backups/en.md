@@ -6,7 +6,7 @@ A compressed copy of every file on your server at the moment it was taken: your 
 
 ## Daily, and before every big change
 
-We take one automatically every day, plus an extra one before anything that touches your files: an upgrade, a version change, a game change, a reset, and a content change from your game panel. These are all on us: they're free, they take nothing from your own space, and we rotate them for you. We keep a history of 7 days on which your server actually changed, and a recovery copy taken before a change lives for 3 days, the window in which you can go back to how things were.
+We take one automatically every day, plus an extra one before anything that touches your files: an upgrade, a version change, a game change, a reset, and the game panel changes that can't be undone, listed under **Changes that touch your world** below. These are all on us: they're free, they take nothing from your own space, and we rotate them for you. We keep a history of 7 days on which your server actually changed, and a recovery copy taken before a change lives for 3 days, the window in which you can go back to how things were.
 
 Before an automatic backup, and before a recovery copy, we compare your server's files with your newest backup. When nothing changed, we take no new copy and instead mark that older backup on its card as still matching your files as of that moment. Backups you take yourself are always taken, changed or not.
 
@@ -43,13 +43,22 @@ How each game saves before a backup:
 
 ## Changes that touch your world
 
-Some buttons in your game panel change your world or your mods directly: adding, deleting or activating a world, installing or removing a mod or pack, and wipes. These never run on a live server. Instead, they start an **Applying your change** operation:
+Some buttons in your game panel make changes to your world or your mods that can't be undone. These never run on a live server, and start an **Applying your change** operation instead:
+
+- **Minecraft Java**: deleting a world, and resetting the Nether or the End.
+- **Minecraft Bedrock**: deleting a world, removing an add-on, and repairing add-ons.
+- **Valheim**: deleting a world, and removing BepInEx with every mod.
+- **Rust** and **ARK: Survival Ascended**: wipes.
+
+The operation runs in three stages:
 
 1. **Saving a recovery copy**: we stop the game and wait until its recovery copy is stored before changing anything.
 2. **Applying the change**: while the game is stopped.
 3. **Restoring the power state**: a running server starts again; a stopped server stays stopped.
 
 Because the server is stopped at that moment, the recovery copy is **Clean**. If the change doesn't complete, we show you the reason, and you can press **Restore recovery copy**: we save your current files first, then restore the files and settings from before the change.
+
+> [!note] Installing, updating, disabling or removing a plugin or mod from a game's catalog, such as the Minecraft Java or Hytale one, is different: it runs on your running server, takes no recovery copy, and applies at the next restart. If you want a way back, take a backup first with **Back up now**.
 
 ## The off-site copy and downloads
 

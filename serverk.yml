@@ -56,6 +56,23 @@ guides:
       ar: guides/panel-basics/ar.md
       en: guides/panel-basics/en.md
 
+  - id: access
+    title:
+      ar: ادعُ أصحابك وشاركهم لوحة سيرفرك
+      en: Invite your friends and share your panel
+    summary:
+      ar: "دعوات اللاعبين للقائمة البيضاء، والأعضاء بحساباتهم، وروابط المشاركة: من يدخل سيرفرك وبأي صلاحيات."
+      en: "Player invites for the whitelist, members with their own accounts, and share links: who gets into your server, and with which permissions."
+    tags:
+      - start
+      - games
+    surfaces:
+      - overview
+      - setup
+    bodyPath:
+      ar: guides/access/ar.md
+      en: guides/access/en.md
+
   - id: backups
     title:
       ar: النسخ الاحتياطية
@@ -71,6 +88,39 @@ guides:
     bodyPath:
       ar: guides/backups/ar.md
       en: guides/backups/en.md
+
+  - id: schedules
+    title:
+      ar: المهام المجدولة
+      en: Scheduled tasks
+    summary:
+      ar: "ريستارت كل ليلة، أو أمر كونسول، أو نسخة احتياطية في وقت تحدده: التكرار، والخطوات، وما يحدث عند التنفيذ."
+      en: "A nightly restart, a console command or a backup at the time you set: repeats, steps, and what happens when it runs."
+    tags:
+      - games
+    surfaces:
+      - overview
+      - backups
+    bodyPath:
+      ar: guides/schedules/ar.md
+      en: guides/schedules/en.md
+
+  - id: crashes
+    title:
+      ar: عندما يتعطّل سيرفرك أو لا يشتغل
+      en: When your server crashes or won't start
+    summary:
+      ar: "ماذا نفعل عند التعطّل، وأين تجد السبب وحله، وكيف تقرأ الكونسول، وماذا تفعل عند امتلاء المساحة."
+      en: "What we do when it crashes, where to find the cause and its fix, how to read the console, and what to do when the disk is full."
+    tags:
+      - start
+      - games
+    surfaces:
+      - overview
+      - console
+    bodyPath:
+      ar: guides/crashes/ar.md
+      en: guides/crashes/en.md
 
   - id: rcon
     title:

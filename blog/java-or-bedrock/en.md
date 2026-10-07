@@ -44,4 +44,4 @@ That's one switch here too. See the [version compatibility guide](/games/minecra
 
 - [The server planner with crossplay](/tools/planner?game=minecraft&crossplay=1): sizes your plan with the phone players counted in.
 - [The crossplay guide](/games/minecraft-java/guides/crossplay): the full steps inside the panel.
-- [Create your server](/create): ready in about a minute, and crossplay is one click after that.
+- [Create your server](/games/create): ready in about a minute, and crossplay is one click after that.

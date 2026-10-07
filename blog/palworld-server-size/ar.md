@@ -54,4 +54,4 @@ tags:
 
 - [احسب باقة بالورلد](/tools/planner?game=palworld)
 - [قارن أسعارنا بغيرنا](/compare)
-- [أنشئ سيرفرك](/create): جاهز خلال دقيقة تقريبًا.
+- [أنشئ سيرفرك](/games/create?game=palworld): جاهز خلال دقيقة تقريبًا.

@@ -4,7 +4,7 @@ Sign up from the [sign-up page](/sign-up). All you need is an email, a username 
 
 ## Pick your game and plan
 
-From the [create a server](/create) page:
+From the [create a server](/games/create) page:
 
 1. **Pick a game**: every game states its requirements clearly, the minimum and recommended RAM
 2. **Pick a plan**: prices are in Saudi riyals, and the recommended plan is highlighted for each game

@@ -51,4 +51,4 @@ The [server planner](/tools/planner?game=palworld) asks how many players and how
 
 - [Size a Palworld plan](/tools/planner?game=palworld)
 - [Compare our prices with the rest](/compare)
-- [Create your server](/create): ready in about a minute.
+- [Create your server](/games/create?game=palworld): ready in about a minute.

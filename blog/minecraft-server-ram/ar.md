@@ -56,4 +56,4 @@ tags:
 
 - [احسب باقتك الآن](/tools/planner?game=minecraft)
 - [قارن أسعارنا بغيرنا](/compare)
-- [أنشئ سيرفرك](/create)
+- [أنشئ سيرفرك](/games/create?game=minecraft-java)
