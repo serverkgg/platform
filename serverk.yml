@@ -82,6 +82,7 @@ guides:
       en: What a backup holds, when we take one for you, the off-site copy and downloads, and how to restore.
     tags:
       - start
+      - games
     surfaces:
       - backups
       - overview
@@ -192,11 +193,11 @@ guides:
 
   - id: billing
     title:
-      ar: الفوترة وتمديد سيرفرك
-      en: Billing and extending your server
+      ar: الفوترة وتمديد اشتراكك
+      en: Billing and extending your subscription
     summary:
-      ar: كيف تُحسب الأسعار بالريال السعودي، ومتى ينتهي سيرفرك، وكيف تمدده قبل أن يتوقف.
-      en: How SAR pricing works, when your server expires, and how to extend it in time.
+      ar: كيف تُحسب الأسعار، ومتى ينتهي اشتراكك، وكيف تمدده قبل أن يتوقف.
+      en: How pricing works, when your subscription ends, and how to extend it in time.
     tags:
       - billing
     bodyPath:
@@ -225,6 +226,7 @@ guides:
       en: Join the Serverk community and link your account to follow your servers from Discord.
     tags:
       - account
+      - games
     bodyPath:
       ar: guides/discord/ar.md
       en: guides/discord/en.md

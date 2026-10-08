@@ -1,18 +1,18 @@
 ## How pricing works
 
-All prices are in Saudi riyals. Your server is paid monthly: every payment extends it by one month from its current expiry date, so extending early never costs you days.
+Prices show in the currency you pick under **Country & currency**. A subscription is paid in advance for one month or more, and every payment extends it from its current end date, so extending early never costs you days.
 
 All your orders and invoices are on the [orders page](/dashboard/orders).
 
-## When does your server expire?
+## When does your subscription end?
 
-Every server shows its expiry date in its panel and on the [billing page](/dashboard/billing). A clear warning appears in the panel a few days before it expires.
+Every subscription shows its end date in its panel and on the [billing page](/dashboard/billing), and a clear warning appears in the panel a few days before.
 
 ## Extending
 
-From the billing page or the warning itself, press **Extend** and pay. The extension is instant, needs no restart, and your server isn't affected at all.
+From the billing page or the warning itself, press **Extend** and pay. The extension is instant and needs no restart, and nothing stops while it happens.
 
-> [!warning] A server that expires without an extension stops, and after the grace period its data is deleted for good. Extend before it expires: a deleted server can't be recovered.
+> [!warning] When a subscription ends without an extension, your server or bot stops, and after the grace period its data is deleted for good. Extend before it ends: deleted data can't be recovered.
 
 ## Refunds
 

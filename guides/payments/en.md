@@ -1,12 +1,12 @@
 ## Available payment methods
 
-Payments go through the Saudi **Moyasar** gateway, which supports:
+Payments go through StreamPay, which supports:
 
 - **mada**: Saudi bank cards
 - **Apple Pay**: the fastest way to pay from your phone
 - **Credit cards**: Visa and Mastercard
 
-All prices are in Saudi riyals: what you see is what you pay, with no currency conversion and no hidden fees.
+Prices show in the currency you pick under **Country & currency**, and what you see is what you pay, with no hidden fees.
 
 ## Payment failed?
 
