@@ -40,6 +40,20 @@ guides:
       ar: guides/getting-started/ar.md
       en: guides/getting-started/en.md
 
+  - id: before-you-buy
+    title:
+      ar: تحقق من البنق قبل الشراء
+      en: Check your ping before you buy
+    summary:
+      ar: اعرف بنقك إلى كل منطقة دون أن تملك سيرفرًا، وجرب سيرفرًا حقيقيًا مجانًا عندما تكون التجربة متاحة، وما يحدث عند انتهائها.
+      en: Know your ping to each region without owning a server, try a real server free when the trial is open, and what happens when it ends.
+    tags:
+      - start
+      - games
+    bodyPath:
+      ar: guides/before-you-buy/ar.md
+      en: guides/before-you-buy/en.md
+
   - id: panel-basics
     title:
       ar: جولة في اللوحة

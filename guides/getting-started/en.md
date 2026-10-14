@@ -8,7 +8,7 @@ From the [create a server](/games/create) page:
 
 1. **Pick a game**: every game states its requirements clearly, the minimum and recommended RAM
 2. **Pick a plan**: prices show in the currency you pick under **Country & currency**, and the recommended plan is highlighted for each game
-3. **Pick a region**: the closer the datacenter is to you and your friends, the lower your ping
+3. **Pick a region**: the closer the datacenter is to you and your friends, the lower your ping, and you can [measure it before you pay](/guides/before-you-buy)
 
 > [!note] Not sure which plan? Start with the recommended one. Upgrading later is easy, and you never lose your world or settings.
 
