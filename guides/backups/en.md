@@ -21,7 +21,7 @@ You get backup space of your own the size of your server's disk: a 20 GB disk gi
 - The backups your own scheduled tasks take.
 - Any automatic backup you keep with **Keep it in your storage**.
 
-Your backups never expire and we never delete them for you; they stay until you delete them. When the space runs out we tell you right away: delete a backup, or stop keeping one, to take a new one.
+Your backups never expire, and we never delete one you took yourself or kept; it stays until you delete it. The one exception is the backups your scheduled tasks take: when the space is full, the task deletes the oldest of them to take a new one, and always leaves the newest. Otherwise, when the space runs out we tell you right away: delete a backup, or stop keeping one, to take a new one.
 
 > [!note] Keeping an automatic backup moves it out of the safety net and into your space: it stops rotating, and it counts against your space. Stop keeping it and it goes back into rotation.
 

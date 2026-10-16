@@ -43,7 +43,7 @@ A Minecraft example of a nightly restart that warns players first:
 
 - **The server is stopped when a console command is due**: we skip that step and don't count it as a failure.
 - **A step fails**: the remaining steps still run. The task shows how its last run went: **Done**, **Partly done** or **Failed**.
-- **A backup** is stored in your own space under the task's name, and counts against it like the backups you take yourself. When the space is full we skip the step, so delete an old backup to get the task working again. The details are in the [backups guide](/guides/backups).
+- **A backup** is stored in your own space under the task's name, and counts against it like the backups you take yourself. When the space is full we delete the oldest backup a scheduled task took to make room, never the newest one and never one you took yourself or kept. If that can't free enough room, the run fails, so delete a backup to get the task working again. The details are in the [backups guide](/guides/backups).
 - **An expired subscription, or a server being set up or updated**: the task doesn't run at that time and runs at the next one.
 
 Every step that runs shows up in **Activity**, marked as coming from a scheduled task.
