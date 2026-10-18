@@ -40,6 +40,8 @@ Minecraft Bedrock, Palworld, Rust and the rest don't read SRV, so the record is 
 
 Your players then join at `play.example.com:port`.
 
+Minecraft Bedrock is different: the address and the port are two separate fields. In the game's **Add Server** screen, the player types `play.example.com` in **Server Address** and your server's port in **Port**.
+
 > [!warning] Never put a CNAME on the domain root (`example.com` with no subdomain). The DNS standard doesn't allow it, and it breaks your email and your website. Use a subdomain such as `play` or `mc`.
 
 ## Why a CNAME and not an A record

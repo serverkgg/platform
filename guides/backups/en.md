@@ -1,6 +1,8 @@
 ## What a backup holds
 
-A compressed copy of every file on your server at the moment it was taken: your world, your plugins, your mods and your config files. You'll find them in the **Backups** tab of your server panel, and you can roll back to any of them with one click.
+A compressed copy of the files your game needs to come back as it was when the backup was taken. We set which files those are for each game. On Minecraft Bedrock they include your worlds, `allowlist.json`, `permissions.json`, `server.properties`, the `behavior_packs` and `resource_packs` folders, the `config` folder and the record of the add-ons you installed. Every other game has its own list.
+
+Files outside that list aren't in the backup, and the **Files** tab shows every file on your server. Your backups are in the **Backups** tab of your server panel, and you can roll back to any of them with one click.
 
 > [!note] A backup captures what reached the disk, not what is still in memory. That's why we ask the game to save first, and we never call a backup clean when the save didn't confirm.
 
