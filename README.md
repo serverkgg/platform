@@ -1,38 +1,57 @@
-# شروحات المنصة (Platform Guides)
+# شروحات المنصة (Platform guides)
 
-الشروحات العامة لمنصة سيرفرك (`serverk.gg`)، وهي كل شرح لا يرتبط بلعبة معيّنة: البداية، واللوحة، والنسخ الاحتياطية، و RCON، و SFTP، والانتقال إلى سيرفرك، والدومين الخاص، والفواتير، والدفع، وديسكورد. تُكتب الشروحات بالعربية أولًا، ثم بالإنجليزية.
+يضم هذا الريبو الشروحات العامة لمنصة سيرفرك، وهي كل شرح لا يرتبط بلعبة معيّنة. وتتوزع على هذه الأقسام: «ابدأ من هنا»، و«الفوترة»، و«الحساب»، و«سيرفرات الألعاب». صفحة الشروحات: [serverk.gg/guides](https://serverk.gg/guides)
 
-The general guides for the Serverk platform (`serverk.gg`): every guide that is not tied to one game. They cover getting started, the panel, backups, RCON, SFTP, moving in, your own domain, billing, payments and Discord. Guides are written in Arabic first, then in English.
+This repository holds the general guides for Serverk: every guide that is not tied to one game. They are grouped under "Start here", "Billing", "Account" and "Game servers". Guides page: [serverk.gg/guides](https://serverk.gg/guides)
 
 ## Layout
 
-- `serverk.yml`: the guide package manifest (`kind: GuidePackage`), with each guide's id, title, summary, tags and body paths.
-- `guides/<id>/ar.md` and `guides/<id>/en.md`: the guide bodies.
-- `blog/<slug>/ar.md` and `blog/<slug>/en.md`: the blog articles. Articles are not listed in `serverk.yml`.
+- `serverk.yml`: the guide package manifest with each guide's id, title, summary, tags and body paths.
+- `serverk.schema.json`: the JSON Schema of `serverk.yml` for the editor, written by `serverk-bridge schema`.
+- `guides/<id>/ar.md` and `en.md`: the guide bodies; each guide's title, summary and tags live in `serverk.yml`.
+- `blog/<id>/ar.md` and `en.md`: the blog articles at `serverk.gg/blog/<id>`, not listed in `serverk.yml`. Each file opens with YAML frontmatter holding `title` and `summary` per language; `publishedAt`, `updatedAt`, `tags` and `video` are read from `ar.md`.
 
-## Blog
+## Guides
 
-An article is a folder under `blog/`. The folder name is the article id, and both languages carry a YAML frontmatter block at the top of the file:
+- [أول سيرفر لك على منصة سيرفرك · Your first server on Serverk](https://serverk.gg/guides/getting-started)
+- [تحقق من البنق قبل الشراء · Check your ping before you buy](https://serverk.gg/guides/before-you-buy)
+- [جولة في اللوحة · A tour of the panel](https://serverk.gg/guides/panel-basics)
+- [ادعُ أصحابك وشاركهم لوحة سيرفرك · Invite your friends and share your panel](https://serverk.gg/guides/access)
+- [النسخ الاحتياطية · Backups](https://serverk.gg/guides/backups)
+- [المهام المجدولة · Scheduled tasks](https://serverk.gg/guides/schedules)
+- [عندما يتعطّل سيرفرك أو لا يشتغل · When your server crashes or won't start](https://serverk.gg/guides/crashes)
+- [الوصول عن بُعد (RCON) · Remote access (RCON)](https://serverk.gg/guides/rcon)
+- [نقل الملفات (SFTP) · File transfer (SFTP)](https://serverk.gg/guides/sftp)
+- [انقل سيرفرك من استضافة أخرى · Move your server in from another host](https://serverk.gg/guides/moving-in)
+- [استخدم دومينك الخاص · Use your own domain](https://serverk.gg/guides/own-domain)
+- [الفوترة وتمديد اشتراكك · Billing and extending your subscription](https://serverk.gg/guides/billing)
+- [طرق الدفع · Payment methods](https://serverk.gg/guides/payments)
+- [اربط حسابك بديسكورد · Connect your Discord](https://serverk.gg/guides/discord)
 
-```md
----
-title: "كيف تنشئ سيرفر ماينكرافت لك ولأصحابك"
-summary: "ثلاث طرق لإنشاء سيرفر: من جهازك، أو مجانًا، أو بالاستئجار. ما يناسبك منها، وما الفرق بينها."
-publishedAt: "2026-09-05"
-tags:
-  - minecraft
----
+## Develop
 
-## ثلاث طرق، وواحدة منها تناسبك
+Everything runs on [Bun](https://bun.sh).
 
-نص المقال.
-```
+- `bun install`: installs the dependencies and points Git at the hooks in `.githooks/`.
+- `bun run check`: checks lint and formatting with Biome; `bun run fix` applies the fixes.
+- `bun run validate`: runs the checks the platform runs at publish, and fails while this README is out of date.
 
-`title` and `summary` are per language. `publishedAt` (required, `YYYY-MM-DD`), `updatedAt`, `tags` and `video` (an 11-character YouTube id) are language independent and are read from `ar.md`; `en.md` may repeat them only with identical values. Unknown keys are rejected. Adding an article is one folder and two files, and nothing else changes.
+`.githooks/pre-commit` runs `bun run fix`, `bun run validate` and `bunx serverk-bridge schema --check` before every commit. There is no CI: a commit that passes the hook is ready.
+
+`bun install` runs `serverk-bridge link`, which links `@serverkgg/bridge` to a sibling `serverk` checkout at `../serverk/modules/bridge` when one exists. Never commit a `file:` or `link:` dependency.
 
 ## Contribute
 
-- افتح issue لأي تصحيح أو شرح ناقص، بالعربية أو بالإنجليزية.
-- Every guide needs both `ar.md` and `en.md`. Arabic is the source, written to the Serverk copy standard: formal Arabic with a light Gulf touch, as defined in `serverk/.claude/skills/serverk-copy/SKILL.md`.
-- File names, commands and config keys stay Latin inside code spans.
-- Publishing to the platform is done by the Serverk team through the central release pipeline; merged changes ride the next release.
+افتح issue لأي مشكلة أو اقتراح، بالعربية أو بالإنجليزية. ينشر فريق سيرفرك هذا الريبو من ريبو `serverk` بالأمر `bunx outdo platform --prod`، ويصل كل تغيير مدموج مع النشر التالي. العربية هي لغة المصدر: يُكتب كل نص يقرؤه العميل بالعربية أولًا، بلغة رسمية مع لمسة خليجية خفيفة، ثم بالإنجليزية. أبقِ أسماء الملفات والأوامر والمفاتيح بالحروف اللاتينية.
+
+Open an issue for any problem or suggestion, in Arabic or English. Serverk releases this repository from `serverk` with `bunx outdo platform --prod`; merged changes ride the next release. Arabic is the source language: every string a customer reads is written in Arabic first, formal with a light Gulf touch, then in English. Keep file names, commands and config keys in Latin script.
+
+## License
+
+الكود متاح للقراءة، وجميع الحقوق محفوظة لمنصة سيرفرك، ولا يُمنح أي ترخيص.
+
+The code is public to read. All rights are reserved by Serverk, and no license is granted.
+
+يُنشأ هذا الملف بالأمر `serverk-bridge readme` من `serverk.yml`، فعدّل ملف التعريف لا هذا الملف.
+
+Generated by `serverk-bridge readme` from `serverk.yml`; edit the manifest, not this file.
